@@ -8,14 +8,14 @@
 #Home{
     /* width : 100%; */
     height : 100vh;
-    background : linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('bg.jpeg');
-    background-position: center;
-    background-size: cover;
+    background : linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('bg.jpeg') center/cover ;
     color : white;
 }
 Header{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
 }
 Header .logo{
     color : #3d9741;
@@ -44,8 +44,8 @@ Header .nav{
     transition : .5s ease-in-out;
 }
 .menu{
-    padding : 1em 2em;
-    font-size: 1.5rem;
+    /* padding : 1em 2em;
+    font-size: 1.5rem; */
     display: none;
 }
 #Home section{
@@ -111,7 +111,7 @@ Header .nav{
     width : 90%;
     margin : auto;
     display : flex;
-    padding : 6em;
+    padding : 3em;
     column-gap : 4.25em;
     text-align: left;
 }
@@ -144,7 +144,7 @@ Header .nav{
 }
 
 .sect2{
-    padding: 4em;
+    padding: 3em;
     background-color:#201f20 ;
     color : white;
     display : flex;
@@ -239,8 +239,8 @@ hr{
     justify-content: center;
 }
 .card .content {
-    height : 20em;
-    width : 35%;
+    max-height : 20rem;
+    width : 40%;
     min-width : 20em;
     background-color: #474547;
     color : white;
@@ -250,6 +250,7 @@ hr{
 }
 .card .content img{
     width : 5em;
+    height: 5.5em;
     border-radius: 50%;
     margin-bottom: 10px;
     
@@ -265,7 +266,7 @@ hr{
 
 /* media query */
 
-@media (max-width : 800px) {
+@media (max-width : 940px) {
     header{
         flex-direction: column;
         text-align: center;
@@ -283,17 +284,24 @@ hr{
         gap : 2em;
     }
     .sect2 .abt{
-        width : 80%;
+        width : 100%;
         margin : 0 auto;
         text-align: center;
     }
+    .sect2 .abt p{
+        text-align: left;
+    }
     .sect2 .logo{
-        width : 80%;
+        width : 100%;
         justify-content: center;
         margin : 0 auto;
     }
+    .sect2 .logo div{
+        width: 80%;
+    }
+
 }
-@media (max-width : 650px) {
+@media (max-width : 700px) {
     header{
         flex-direction: row;
     }
@@ -301,16 +309,70 @@ hr{
         flex-direction: column;
         gap : 1em;
         align-items: center;
-        text-align : center;
+    }
+    .card .content{
+        width: 90%;
     }
     .card .content img{
         float : left;
-        margin : 1em;
+        margin : .2em 1em;
     }
-    .nav{
-        display: none;
+    .card .content h1, .icons{
+        text-align: center;
     }
     .menu{
         display: inline;
+        position: absolute;
+        z-index: 9999;
+        cursor : pointer;
+        color : green;
+        right : 25px;
+        top : 10px;
+        font-size: 30px;
+    }
+
+    .hamburger-menu{
+        position: fixed;
+        width: 100%;
+        inset : 0 0;
+        margin: 0;
+        backdrop-filter: blur(10px) brightness(.3);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+        gap : 1em;
+    }
+
+    .hamburger-menu[data-visible = "true"]{
+        transform: translateX(100%);
+        transition : .3s ease-in;
+    }
+
+    .hamburger-menu[data-visible = "false"]{
+        transform: translateX(0%);
+        transition : .3s ease-in;
+    }
+
+    #process .content{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        gap : 1em;
+    }
+    .one, .two, .three{
+        text-align: center;
+    }
+    #process .content h1{
+        margin: 1rem;
+    }
+
+    .line, .circles{
+        display: none;
+    }
+
+    #process h1{
+        margin-bottom: 1em;
     }
 }

@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4ae2e772d9.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
     <title> Funtech </title>
 </head>
 <body>
@@ -15,7 +17,7 @@
             <h1>Funtech</h1>
         </div>
         <nav class = "nav">
-            <ul>
+            <ul class="hamburger-menu" data-visible="true">
                 <li><a href="#Home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#process">Process</a></li>
@@ -24,7 +26,7 @@
             </ul>
         </nav>
         <div class="menu">
-            <box-icon name="menu" color="green" size="40px"></box-icon>
+            <i class="fa-solid fa-bars"></i>
         </div>
     </header>
 
@@ -113,7 +115,7 @@
     <div class="content">
         <div class="one">
             <h1> One </h1> 
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum quas deleniti, dicta recusandae asperiores placeat voluptates a obcaecati quis nobis. Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum quas deleniti, dicta recusandae asperiores placeat voluptates a obcaecati quis nobis. Lorem ipsum dolor sit, amet consectetur adipisicing elit .</p>
         </div>
         <div class="two">
             <h1> Two </h1> 
@@ -132,26 +134,30 @@
     <div class="card">
         <div class="content">
             <img src = "ali.jpg">
-            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nulla rem deserunt soluta excepturi? Exercitationem ex debitis neque doloribus maxime.</p>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nulla rem deserunt soluta excepturi? Exercitationem ex debitis neque doloribus maxime sit amet soluta.</p>
             <h1> John Doe </h1>
-            <box-icon type='solid' name='star' color = 'whitesmoke'></box-icon>
-            <box-icon type='solid' name='star' color = 'whitesmoke'></box-icon>
-            <box-icon type='solid' name='star' color = 'whitesmoke'></box-icon>
-            <box-icon type='solid' name='star' color = 'whitesmoke'></box-icon>
-            <box-icon type='solid' name='star-half' color = 'whitesmoke'></box-icon>
+            <div class="icons">
+                <box-icon type='solid' name='star' color = 'whitesmoke'></box-icon>
+                <box-icon type='solid' name='star' color = 'whitesmoke'></box-icon>
+                <box-icon type='solid' name='star' color = 'whitesmoke'></box-icon>
+                <box-icon type='solid' name='star' color = 'whitesmoke'></box-icon>
+                <box-icon type='solid' name='star-half' color = 'whitesmoke'></box-icon>
+            </div>
         </div>
         <div class="content">
             <img src = "michael.jpg">
-            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nulla rem deserunt soluta excepturi? Exercitationem ex debitis neque doloribus maxime.</p>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nulla rem deserunt soluta excepturi? Exercitationem ex debitis neque doloribus maxime sit amet soluta.</p>
             <h1> Lora Smith </h1>
-            <box-icon type='solid' name='star' color = 'whitesmoke'></box-icon>
-            <box-icon type='solid' name='star' color = 'whitesmoke'></box-icon>
-            <box-icon type='solid' name='star' color = 'whitesmoke'></box-icon>
-            <box-icon type='solid' name='star' color = 'whitesmoke'></box-icon>
-            <box-icon type='solid' name='star-half' color = 'whitesmoke'></box-icon>
+            <div class="icons">
+                <box-icon type='solid' name='star' color = 'whitesmoke'></box-icon>
+                <box-icon type='solid' name='star' color = 'whitesmoke'></box-icon>
+                <box-icon type='solid' name='star' color = 'whitesmoke'></box-icon>
+                <box-icon type='solid' name='star' color = 'whitesmoke'></box-icon>
+                <box-icon type='solid' name='star-half' color = 'whitesmoke'></box-icon>
+            </div>
         </div>
     </div>
    </div>
-   <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+   <script src="script.js"></script>
 </body>
 </html>
