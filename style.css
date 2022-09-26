@@ -5,13 +5,39 @@
   font-family : 'Poppins', sans-serif;
   box-sizing: border-box;
 }
+
+html{
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-gutter: stable;
+}
+
+/* modifying scrollbar */
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(162, 158, 158, 0.616);
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    size: 2rem;
+}
+
+
 #Home{
     /* width : 100%; */
     height : 100vh;
     background : linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('bg.jpeg') center/cover ;
     color : white;
 }
-Header{
+#Home Header{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -33,7 +59,6 @@ Header .nav{
 .nav li{
     display : inline;
     padding-right : 1.2em;
-
 }
 .nav a{
     text-decoration : none;
@@ -76,10 +101,11 @@ Header .nav{
     width : 250px; 
     background-color: #fff;
     margin : 2px 0;
-    padding: 5px;
+    padding: 8px 10px;
     border-style: none;
     font-size: 15px;
     letter-spacing: .1em;
+    border-radius: 1rem;
 }
 .form ::placeholder{
     color : grey;
@@ -93,6 +119,7 @@ Header .nav{
     width : 250px; 
     background-color: #3d9741;
     border-style: none;
+    border-radius: 1rem;
     margin : 15px 0;
     padding: 5px;
     font-weight: bold;
@@ -105,6 +132,118 @@ Header .nav{
     transition: 0.3s ease-in-out;
 }
 
+/* Events */
+
+#events{
+    background-color: #201f20;
+    color : white;
+    padding: 3rem 3rem 0;
+}
+
+#events header{
+    /* padding : 1em; */
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: cursive;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, .7);
+}
+
+#events main{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+#events .container{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap : 5em;
+}
+
+.slider-container {
+    position: relative;
+    width : 500px;
+    height : 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.slider{
+    display: flex;
+    transition: transform .3s ease-in-out;
+}
+
+#events .icons{
+    position: absolute;
+    top : 43%;
+    color : white;
+    cursor : pointer;
+    font-size: 2.3rem;
+    opacity : .3;
+}
+
+#events .icons:hover{
+    opacity: .8;
+}
+.prev{
+    left : 10px;
+}
+
+.next{
+    right : 10px;
+}
+
+#events .circles{
+    width : 500px;
+    display: flex;
+    justify-content: center;
+    gap : 1rem;
+}
+#events .circle{
+    height : 30px;
+    width : 30px;
+    border-radius: 50%;
+    border : 2px solid grey;
+}
+
+#events .active.circle{
+    background-color: aliceblue;
+}
+
+.news-container{
+    width: 25%;
+    height: 70%;
+    background-color: #201f20;
+    background-image: 
+        radial-gradient(at 47% 50%, hsl(150.11, 87%, 31%) 0, transparent 59%), 
+        radial-gradient(at 82% 65%, hsl(222.35, 39%, 8%) 0, transparent 55%);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .5);
+}
+
+.news{
+    padding: 1rem;
+    backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(32, 31, 32, 0.75);
+    border-radius: 1rem;
+}
+
+.news h1{
+    text-align: center;
+}
+.news .desc{
+    margin: 1rem 0;
+    line-height: 1.5;
+}
+.news .desc p{
+    margin: 1rem 0;
+    line-height: 1.5;
+}
 /* About Section */
 
 #about .sect1{
@@ -173,19 +312,22 @@ Header .nav{
     margin : 1em;
     border-radius : 2px;
     text-align: center;
-    padding : 1em;
+    padding : 1rem;
 }
 .logo h2{
-    margin-top : 1em;
+    margin-top : .5em;
     color : #201f20;
+    line-height: 1.2;
 }
-.sect2 .logo box-icon{
+.sect2 .logo .icon{
     margin : 0 auto;
+    font-size: 60px;
+    color: green;
 }
 /* Process */
 
 #process {
-    padding : 10%;
+    padding : 5%;
 }
 #process h1{
     font-weight: 800;
@@ -260,9 +402,103 @@ hr{
     line-height: 1.5em;
     margin-bottom : .70em;
 }
-.card .content box-icon{
-    margin-top: .4em;
+.card .content .icons{
+    font-size: 1.5rem;
 }
+
+/* Contact */
+
+#contact{
+    padding : 2em;
+}
+
+#contact header{
+    text-align: center;
+}
+
+#contact header p{
+    margin: 1em 0;
+}
+
+#contact section{
+    display: flex;
+    width : 100%;
+    justify-content: space-around;
+    align-items: center;
+    gap : 1rem;
+}
+
+#contact .phone, #contact .email{
+    display: flex;
+    align-items: center;
+    gap : 1.5rem;
+}
+
+#contact .details{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap : 1em;
+}
+
+#contact .details .icon{
+    font-size: 30px;
+}
+
+#contact .socials{
+    font-size: 2.5rem;
+    display: flex;
+    gap : 1.5rem;
+}
+
+#contact .socials a{
+    text-decoration: none;
+    color: #000;
+}
+
+#contact .mail{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap : 1rem;
+    width: 40%;
+}
+
+#contact .mail input, #contact .mail #msg{
+    border-width: 0 0 2px;
+    font-size: 1rem;
+    padding: 5px;
+    outline: none;
+}
+
+#contact .mail #msg{
+    resize: none;
+}
+
+#contact .btn{
+    width: 6rem;
+    padding : 5px;
+    font-size: 1.2rem;
+    border-radius: 1.1rem;
+    color : white;
+    background-color: #3d9741;
+    border : none;
+    cursor: pointer;
+}
+#contact .btn:hover{
+    filter : brightness(.8);
+    transition: .3s ease-in;
+}
+
+footer{
+    background-color: #201f20;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+
 
 /* media query */
 
@@ -300,6 +536,25 @@ hr{
         width: 80%;
     }
 
+    #contact section{
+        flex-direction: column;
+        gap : 3rem;
+    }
+
+     #contact .mail{
+        width : 80%;
+    }
+
+    #events main{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #events .news-container{
+        width : 80%;
+        margin: 2rem auto;
+    }
+
 }
 @media (max-width : 700px) {
     header{
@@ -322,7 +577,7 @@ hr{
     }
     .menu{
         display: inline;
-        position: absolute;
+        position: fixed;
         z-index: 9999;
         cursor : pointer;
         color : green;
@@ -375,4 +630,9 @@ hr{
     #process h1{
         margin-bottom: 1em;
     }
+
+    #events .slider-container{
+        width: 90%;
+    }
+   
 }
