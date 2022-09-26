@@ -553,8 +553,18 @@ footer{
 
 }
 @media (max-width : 700px) {
-    header{
+    #Home .logo{
+        padding: 1rem;
+    }
+    #Home header{
         flex-direction: row;
+        justify-content: center;
+    }
+    #Home section, .form{
+        margin : 0;
+        padding: 2rem;
+        padding-top: 1rem;
+        width: 100%;
     }
     .card{
         flex-direction: column;
@@ -572,7 +582,7 @@ footer{
         text-align: center;
     }
     .menu{
-        display: inline;
+        display: block;
         position: fixed;
         z-index: 9999;
         cursor : pointer;
@@ -582,6 +592,9 @@ footer{
         font-size: 30px;
     }
 
+    #Home .nav{
+        position: relative;
+    }
     .hamburger-menu{
         position: fixed;
         width: 100%;
@@ -607,6 +620,10 @@ footer{
         transition : .3s ease-in;
     }
 
+    #about .sect1, #about .sect2{
+        padding: 1rem;
+    }
+
     #process .content{
         display: flex;
         flex-direction: column;
@@ -628,6 +645,9 @@ footer{
         margin-bottom: 1em;
     }
 
+    #events{
+        padding: 1rem;
+    }
     #events .slider-container{
         width: min(90%, 500px);
     }
