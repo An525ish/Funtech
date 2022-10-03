@@ -475,6 +475,10 @@ hr{
     resize: none;
 }
 
+#contact .mail #msg::-webkit-scrollbar{
+    display: none;
+}
+
 #contact .btn{
     width: 6rem;
     padding : 5px;
